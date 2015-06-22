@@ -5,7 +5,7 @@ node-modules:
 	npm prune
 
 css:
-	compass compile
+	$(COMPASS) compile
 	cp -r public/sass/jqueryui/images public/css/
 	cp -r public/sass/select2/select2.png public/css/
 	cp -r public/sass/select2/select2x2.png public/css/
@@ -37,7 +37,7 @@ test:
 	@NODE_ENV=testing ./node_modules/.bin/mocha --recursive
 
 clean:
-	compass clean
+	$(COMPASS) clean
 	rm -rf public/css
 	rm -rf public-build
 	rm -rf public-production
