@@ -14,3 +14,10 @@ PopIt helps you create and maintain reusable fundamental 'who's who' open data a
 
 - You can use our hosted version of PopIt at [popit.mysociety.org](https://popit.mysociety.org/instances/new)
 - If you want to host it yourself check out out [install documentation](http://popit.poplus.org/docs/install/)
+
+## How do I start PopIt (in a docker image)?
+
+- `service elasticsearch restart`
+- `redis-server >redis.log 2>redis.err &`
+- `mongod >mongo.log 2>mongo.err &`
+- `npm start`
